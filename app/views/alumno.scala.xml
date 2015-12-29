@@ -1,0 +1,12 @@
+
+@(alumno: Alumno)
+<alumno id="@alumno.getId()">
+	<nombre>@alumno.getNombre()</nombre>
+	<apellido1>@alumno.getApellido1()</apellido1>
+	<apellido2>@alumno.getApellido2()</apellido2>
+	<asignaturas>
+		@for(a <- alumno.getAsignaturas()) {
+		@asignatura(a)
+		}
+	</asignaturas>
+</alumno>

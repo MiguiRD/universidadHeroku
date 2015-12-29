@@ -1,0 +1,12 @@
+
+@(asignatura: Asignatura)
+<asignatura id="@asignatura.getId()">
+	<nombre>@asignatura.getNombre()</nombre>
+	<curso>@asignatura.getCurso()</curso>
+	<profesor>@asignatura.getProfesor()</profesor>
+	<alumnos>
+		@for(a <- asignatura.getAlumnos()) {
+		@alumno(a)
+		}
+	</alumnos>
+</asignatura>

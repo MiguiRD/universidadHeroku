@@ -1,0 +1,8 @@
+
+@(asignaturas : List[Asignatura])
+
+<asignaturas>
+	@for(a <- asignaturas) {
+	@asignatura(a)
+	}
+</asignaturas>

@@ -1,0 +1,20 @@
+GET		/                                     			controllers.Application.index()
+
+GET 	/alumno/$id<[0-9]{8}>							controllers.AlumnoController.getAlumno(id: String)
+GET 	/alumnos										controllers.AlumnoController.listarAlumnos()
+POST 	/alumno/ 										controllers.AlumnoController.crearAlumno()
+GET 	/alumno/$id<[0-9]{8}>							controllers.AlumnoController.actualizarAlumno(id: String)
+DELETE	/alumno/$id<[0-9]{8}>							controllers.AlumnoController.eliminarAlumno(id: String)
+
+POST 	/profesor/ 										controllers.AsignaturaController.crearProfesor()
+
+GET 	/asignatura/$id<[0-9]{6}>						controllers.AsignaturaController.getAsignatura(id: String)
+GET 	/asignaturas									controllers.AsignaturaController.listarAsignaturas()
+POST 	/asignatura/ 									controllers.AsignaturaController.crearAsignatura()
+GET 	/asignatura/$id<[0-9]{6}>						controllers.AsignaturaController.actualizarAsignatura(id: String)
+DELETE 	/asignatura/$id<[0-9]{6}>						controllers.AsignaturaController.eliminarAsignatura(id: String)
+
+GET		/asignarAsignatura/$idAs<[0-9]{6}>/$idP<[0-9]{8}>	controllers.AsignaturaController.asignarAsignaturaAProfesor(idAs: String, idP: String)
+GET		/asignarAlumno/$idAl<[0-9]{8}>/$idAs<[0-9]{6}>		controllers.AsignaturaController.asignarAlumnoAAsignatura(idAl: String, idAs: String)
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file              						 controllers.Assets.versioned(path="/public", file: Asset)

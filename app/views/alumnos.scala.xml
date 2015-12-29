@@ -1,0 +1,7 @@
+
+@(alumnos : List[Alumno])
+<alumnos>
+	@for(a <- alumnos) {
+	@alumno(a)
+	}
+</alumnos>
