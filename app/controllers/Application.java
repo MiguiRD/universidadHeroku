@@ -8,7 +8,7 @@ import views.html.*;
 public class Application extends Controller {
 
     public Result index() {
-        return ok();
+        return ok("Bienvenido a la universidad Miguel Regalado - Carlos Ramos");
     }
 
 }
